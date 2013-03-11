@@ -87,6 +87,8 @@ class GuessGame
 	{
 		if(($width * $height) % 2 != 0) throw new Exception('Board size must be an even number, you passed in ' . $width . 'x' . $height . '(' . ($width * $height) . ').');
 		
+		if($width > 15 || $height > 14) throw new Exception('Board size must be max 15x14, you passed in ' . $width . 'x' . $height . '.');
+		
 		// Set internal width/height
 		$this->_boardWidth = $width;
 		$this->_boardHeight = $height;
