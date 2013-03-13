@@ -8,6 +8,7 @@
 	</head>
 	
 	<body>
+		<?php if(isset($_GET['type']) === false || $_GET['type'] != 'images'): ?><p style="text-align:center;"><a href="?bw=<?php echo $_bwidth; ?>&amp;bh=<?php echo $_bheight; ?>&amp;type=images">Play with images instead of numbers!</a></p><?php endif; ?>
 		<?php
 
 		require_once 'lib/GuessGame.php';
@@ -54,7 +55,6 @@
 			exit;
 		}
 ?>
-		<?php if(isset($_GET['type']) === false || $_GET['type'] != 'images'): ?><p style="text-align:center;"><a href="?bw=<?php echo $_bwidth; ?>&amp;bh=<?php echo $_bheight; ?>&amp;type=images">Play with images instead of numbers!</a></p><?php endif; ?>
 		<form method="get" action="" class="changeSize">
 			<fieldset>
 				<p>
