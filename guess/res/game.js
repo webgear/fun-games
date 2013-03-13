@@ -12,7 +12,7 @@
 			if(_celm.length == 0) {
 				// Create mask
 				$('<div class="mask"><a href="#">&nbsp;</a></div>').appendTo($(this))
-					.css({ width:0, height:$(this).height() + 'px'})
+					.css({ width:0, height:($(this).height() + parseInt($(this).attr('padding-top')) + parseInt($(this).attr('padding-bottom'))) + 'px'})
 					.animate({
 						width:$(elm).width() + 'px'
 					}, 'slow');
@@ -21,7 +21,7 @@
 				_celm.animate({
 						width:0
 					}, Game.animationSpeed).animate({
-						width:$(elm).width() + 'px'
+						width:($(elm).width() + parseInt($(elm).css('padding-left')) + parseInt($(elm).css('padding-right'))) + 'px'
 					}, Game.animationSpeed);
 			}
 			
@@ -77,6 +77,6 @@
 	$(document).ready(function() {
 		console.log('Initializing game board...');
 		
-		Game.initBoard();
+		window.setTimeout(Game.initBoard, 500);
 	});
 })(jQuery);
