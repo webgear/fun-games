@@ -401,8 +401,10 @@ table.guess.game tbody tr td { border-left:1px solid #ccc; border-bottom:1px sol
 table.guess.game tbody tr td span.number { display:block; padding:15px 0; text-align:center; color:#0085eb; text-decoration:none; background-color:#fff; width:50px;}
 table.guess.game tbody tr td .mask { position:absolute; left:0; top:0; background-color:#0085eb; width:0; height:100%;}
 table.guess.game tbody tr td .mask a { text-decoration:none; background:transparent; display:block; padding:0; width:100%; height:100%;}
+table.guess.game tbody tr td p { text-align:center; width:50px;}
+table.guess.game tbody tr td p img { display:block; margin:0 auto;}
 
-form.changeSize { margin:0 auto; padding:0; width:300px; text-align:center;}
+form.changeSize { margin:0 auto; padding:0; text-align:center;}
 form.changeSize fieldset { border:0; margin:0; padding:0;}
 form.changeSize fieldset label, form.changeSize fieldset input { text-align:center; font-size:12px;}
 form.changeSize fieldset input[type="text"] { width:25px;}

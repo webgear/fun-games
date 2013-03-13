@@ -83,7 +83,7 @@ class GuessGame
 	 * @param int $width
 	 * @param int $height
 	 */
-	private function _initBoard($width, $height)
+	protected function _initBoard($width, $height)
 	{
 		if(($width * $height) % 2 != 0) throw new Exception('Board size must be an even number, you passed in ' . $width . 'x' . $height . '(' . ($width * $height) . ').');
 		
@@ -113,9 +113,6 @@ class GuessGame
 				$this->_board[$i][$j] = $this->_boardValues[$i][$j];
 			}
 		}
-		
-		// Draw the board automatically
-		$this->_drawBoard();
 	}
 	
 	/**
@@ -125,7 +122,7 @@ class GuessGame
 	 *
 	 * @return mixed Nothing if $mode is echo, the HTML otherwise
 	 */
-	private function _drawBoard($mode = 'echo')
+	public function drawBoard($mode = 'echo')
 	{
 		$html = '<table class="guess game"><tbody>' . "\n";
 		
